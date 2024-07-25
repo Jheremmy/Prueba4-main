@@ -21,7 +21,7 @@ const Registro = () => {
   const [exito, setExito] = useState('');
 
   const validateForm = () => {
-    if (!nombre || !apellido || !email || !telefono || edad === '' || !vehiculo || !licencia) {
+    if (!nombre || !apellido || !email || !telefono || edad == "" || !vehiculo || !licencia) {
       return 'Todos los campos son obligatorios.';
     }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
@@ -55,7 +55,6 @@ const Registro = () => {
       await registrarUber(nuevoUber);
       setExito('Registro exitoso');
       setError('');
-      // Limpiar el formulario
       setNombre('');
       setApellido('');
       setEmail('');
